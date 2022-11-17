@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("请输入一个数：");
+            int iNum = Convert.ToInt32(Console.ReadLine());//记录输入数据
+            int i;//作为循环变量
+            for (i = 2; i < iNum; i++)
+            {
+                if (iNum % i == 0)//判断能否被自身整除
+                    break;
+            }
+            if (i == iNum)
+            {
+                Console.WriteLine(iNum + " 是素数。");
+            }
+            else
+            {
+                Console.WriteLine(iNum + " 不是素数。");
+            }
+            Console.ReadLine();
+        }
+    }
+}

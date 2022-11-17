@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static int water = 0;
+        void outlet()//放水，一次放出2个单位
+        {
+            if (water >= 2)
+            {
+                water = water - 2;
+            }
+            else
+            {
+                water = 0;
+            }
+        }
+
+        void inlet()// 注水，一次注入3个单位
+        {
+            water = water + 3;
+        }
+        static void Main(string[] args)
+        {
+            Program outWater = new Program();
+            Program inWater = new Program();
+            Console.WriteLine("水池的水量：" + Program.water);
+            Console.WriteLine("水池注水两次（每次注入3个单位）。");
+            inWater.inlet();
+            inWater.inlet();
+            Console.WriteLine("水池的水量：" + Program.water);
+            Console.WriteLine("\n水池放水一次（每次放水2个单位）。");
+            outWater.outlet();
+            Console.WriteLine("水池的水量：" + Program.water);
+            Console.ReadLine();
+        }
+    }
+}

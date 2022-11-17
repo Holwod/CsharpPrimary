@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("★  世界上最好的六个医生： ★ ");
+            Console.WriteLine("   1.阳光");
+            Console.WriteLine("   2.休息");
+            Console.WriteLine("   3.锻炼");
+            Console.WriteLine("   4.饮食");
+            Console.WriteLine("   5.自信");
+            Console.WriteLine("   6.朋友");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.ReadLine();//定位控制台窗体
+        }
+    }
+}

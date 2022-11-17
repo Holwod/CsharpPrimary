@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\n使用string操作字符串:");
+            string str = "string";
+            Console.WriteLine("源字符串哈希值：" + str.GetHashCode());
+            Console.WriteLine("插入后字符串哈希值：" + str.Insert(0, "string").GetHashCode());
+            Console.WriteLine("\n---------------------------------");
+            Console.WriteLine("\n使用StringBuilder操作字符串:");
+            StringBuilder s = new StringBuilder("string");
+            Console.WriteLine("源字符串哈希值：" + s.GetHashCode());
+            Console.WriteLine("插入后字符串哈希值：" + s.Insert(0, "string").GetHashCode());
+            Console.ReadLine();
+        }
+    }
+}

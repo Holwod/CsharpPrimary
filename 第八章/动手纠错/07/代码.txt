@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void ShowInfo(string str)
+        {
+            Console.WriteLine(str);
+            Console.Read();
+        }
+        static void Main(string[] args)
+        {
+            //此处发生错误，主要是方法的参数类型不对引起的
+            //上面的定义ShowInfo方法时，传入的参数为string类型
+            //但这里调用ShowInfo方法时，传入了一个368 int数据，可以将368用""引起来作为一个字符串，代码修改如下：
+            //ShowInfo("368");
+            ShowInfo(368);
+        }
+    }
+}

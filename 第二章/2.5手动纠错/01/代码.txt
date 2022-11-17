@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "明日科技";
+            Console.WriteLine(Name);//此处错误，因为C#是区分大小写的，所以应该将Name修改为name
+            Console.ReadLine();
+        }
+    }
+}

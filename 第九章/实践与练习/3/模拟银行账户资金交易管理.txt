@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class CBank
+    {
+        DateTime[] Date = new DateTime[100];//操作日期
+        double[] Money = new double[100];//存取金额
+        double[] Rest = new double[100];//余额
+        double balance;//每一次交易后的余额
+        int top;//访问数组变量
+        internal void Bankin(DateTime date, double money)
+        {
+            Date[top] = date;//将日期保存到日期数组中
+            balance += money;// 当前余额
+            Money[top] = money;//存款金额
+            Rest[top] = balance;//余额
+            top++;
+        }
+        internal void Bankout(DateTime date, double money)
+        {
+            Date[top] = date;//将日期保存到日期数组中
+            balance -= money;// 当前余额
+            Money[top] = -money;//取款金额
+            Rest[top] = balance;//余额
+            top++;
+        }
+        internal void Display()
+        {
+            int i = 0;
+            Console.WriteLine("日期********************存入********************支出********************余额\n");
+            for (i = 0; i < top; i++)
+            {
+                Console.Write(Date[i].ToString("yyyy-MM-dd"));
+                if (Money[i] > 0)
+                {
+                    Console.Write("———————" + Money[i] + "——————————————————————");
+                }
+                else
+                {
+                    Console.Write("———————————————————" + -Money[i] + "——————————");
+                }
+                Console.Write(Rest[i]);
+                Console.WriteLine();
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CBank account = new CBank();//创建银行账户
+            account.Bankin(new DateTime(2020, 01, 06), 2000);//存入
+            account.Bankin(new DateTime(2020, 01, 08), 3000);
+            account.Bankin(new DateTime(2020, 02, 01), 5000);
+            account.Bankin(new DateTime(2020, 02, 11), 1000);
+
+            account.Bankout(new DateTime(2020, 03, 01), 200);//取出
+            account.Bankout(new DateTime(2020, 03, 02), 400);
+            account.Bankout(new DateTime(2020, 03, 05), 600);
+            account.Bankout(new DateTime(2020, 03, 10), 300);
+            account.Display();
+            Console.ReadLine();
+        }
+    }
+}

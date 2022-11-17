@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char sex = 'M'; //定义字符变量，记录用户的性别
+            Console.WriteLine("      您的保险单信息");
+            Console.WriteLine();
+            Console.WriteLine("    保险单号：20171211");
+            Console.WriteLine("    年    龄：25");
+            Console.WriteLine("    保险额度：50000");
+            Console.WriteLine("    性    别：" + sex);
+            Console.ReadLine();
+        }
+    }
+}

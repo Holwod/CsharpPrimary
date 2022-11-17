@@ -1,0 +1,45 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string word = "";
+            string word1 = "2019年乌克兰大选第二轮投票结束，喜剧演员泽连斯基宣布胜选，波罗申科承认落败。出口民调显示，喜剧演员泽连斯基支持率为73.3%，波罗申科支持率为26.3%。";
+            string word2 = "宝马在美国再次召回了近18.5万辆汽车，原因是这些车辆的发动机存在起火的风险。召回车型范围包括2006年的3系、5系和Z4车型。";
+            string word3 = "三大运营商5G布局频频发力，世嘉科技、富春股份、中兴通讯、杭电股份等 11家公司一季报实现同比增长。";
+            string word4 = "广东省司法厅官网公布《广东省学校安全条例》，首次对中小学教师的管教权进行了明确——学校和教师可依法对学生进行批评教育甚至采取一定的教育惩罚措施。";
+            ArrayList list = new ArrayList();
+            list.Add(word1);
+            list.Add(word2);
+            list.Add(word3);
+            list.Add(word4);
+            Console.Write("请输入每行文字的长度（10-40）:");
+            int lenin = Convert.ToInt32(Console.ReadLine());
+            if (lenin < 10 && lenin > 40)
+                Console.WriteLine("输入长度超出范围，退出程序 !!");
+            int linemax = lenin * 2;
+            Console.WriteLine("新闻头条");
+            foreach (string item in list)
+            {
+                int linelen = item.Length;
+                int linenew = lenin;
+                if (lenin < linelen)
+                {
+                    word = item.Substring(0, lenin) + "......";
+                    Console.WriteLine(word);
+                }
+                else
+                    Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+    }
+}

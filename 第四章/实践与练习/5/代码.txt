@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rnd = new Random();
+            int no1 = rnd.Next(9);
+            int no2 = rnd.Next(9);
+            int no3 = rnd.Next(9);
+            int no4 = rnd.Next(9);
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\t" + no1 + "+" + no2 + "= ?\t\t");
+            Console.WriteLine();
+            Console.WriteLine("\t" + no3 + "*" + no4 + "= ?\t\t");
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str1 = null;
+            string str2 = "";
+            str1.ToLower();//此处发生错误，因为str1变量为null引用，应该为str1赋一个值，只要不为null即可
+            str2.ToLower();
+        }
+    }
+}

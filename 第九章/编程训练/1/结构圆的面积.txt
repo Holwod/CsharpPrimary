@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        public struct Round//定义一个圆形结构
+        {
+            const double PI = 3.14;
+            public double r;//圆形的半径
+            public Round(double r)//构造函数，初始化圆形的半径
+            {
+                this.r = r;
+            }
+            public double Area()//圆形面积
+            {
+                return PI*r*r;
+            }
+        } 
+        static void Main(string[] args)
+        {
+            Round r1;//实例化圆形结构
+            r1.r = 5;//为圆形半径赋值
+            Console.WriteLine("圆形面积为：" + r1.Area());
+            Round r2 = new Round(3.82);//使用构造函数实例化圆形结构
+            Console.WriteLine("圆形面积为：" + r2.Area());
+            Console.ReadLine();
+        }
+    }
+}

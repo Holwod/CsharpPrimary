@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("     计算牛奶蛋白质含量 ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write("请输入牛奶的袋数：");
+            int num = Convert.ToInt32(Console.ReadLine());
+            double total = num * 6.4;
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("袋牛奶含有蛋白质：{0:f1}", total);
+            Console.ReadLine();//定位控制台窗体
+        }
+    }
+}

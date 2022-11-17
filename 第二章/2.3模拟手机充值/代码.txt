@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("欢迎使用XXX充值业务，请输入充值金额：");//在控制台中输出提示信息
+            string password = Console.ReadLine();//记录用户的输入
+            Console.WriteLine("充值成功，您本次充值 " + password+" 元");//输出用户的输入信息
+            Console.ReadLine();//定位控制台窗体
+        }
+    }
+}

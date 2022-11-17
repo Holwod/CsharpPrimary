@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Test06
+{
+    class Program
+    {
+        const double PI = 3.14;//声明一个常量
+        static void Main(string[] args)
+        {
+            PI = 3.1415926;//此处错误，常量的值不可改变，可以去掉这一行代码，也可以将上面声明变量中的const关键字去掉
+            Console.WriteLine(PI);
+            Console.ReadLine();
+        }
+    }
+}

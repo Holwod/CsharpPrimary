@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Test03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float fl = 15.5;//此处发生错误，应该在15.5后面加f或者F
+            Console.WriteLine("float变量值为：" + fl);
+            Console.ReadLine();
+
+        }
+    }
+}

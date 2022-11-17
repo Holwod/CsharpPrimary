@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int shj1 = 45;//声明整型变量shj1，并赋值为45
+            int shj2 = 0;//声明整型变量shj2，并赋值为0
+            int ls;//声明整型变量ls
+            ls = shj1 / shj2;//此处发生错误，因为shj2的值为0，而、运算符不允许除以0，这里可以将shj2的值修改其他不为0整数，比如1、2、5……
+            Console.WriteLine(ls.ToString());
+            Console.Read();
+        }
+    }
+}

@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("请输入支付金额：");
+            double amount = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("         支付成功");
+            Console.WriteLine("         京东商城");
+            Console.WriteLine("    " + amount + "元");
+            Console.WriteLine("优惠金额            10.00元");
+            Console.WriteLine("支付方式            工商银行储蓄卡(5009)");
+            Console.WriteLine("交易时间            " + DateTime.Now.ToString());
+            Console.WriteLine("订单编号             893412929");
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    public abstract class Factory
+    {
+        string name;
+        public string getName()
+        {
+            return name;
+        }
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+        public abstract string produce();
+    }
+    public class AutoPlant : Factory
+    {
+        public string productsName;
+        public AutoPlant(string productsName)
+        {
+            this.productsName = productsName;
+        } 
+        public override string produce()
+        {
+            return this.productsName;
+        }
+    }
+
+    public class ShoeFactory : Factory
+    {
+        public string productsName;
+        public ShoeFactory(string productsName)
+        {
+            this.productsName = productsName;
+        }
+
+        public override string produce()
+        {
+            return this.productsName;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            AutoPlant autoPlant = new AutoPlant("汽车");
+            autoPlant.setName("汽车厂");
+            Console.WriteLine(autoPlant.getName() + "生产的是" + autoPlant.productsName);
+            ShoeFactory shoeFactory = new ShoeFactory("鞋");
+            shoeFactory.setName("鞋厂");
+            Console.WriteLine(shoeFactory.getName() + "生产的是" + shoeFactory.productsName);
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\n ——————猜数字游戏——————\n");
+            int iNum;
+            int iGuess;
+            Random rand = new Random();
+            iNum = rand.Next(1, 200);//生成1到200之间的随机数
+            Console.Write(" 请输入你猜的数字：");
+            iGuess = Convert.ToInt32(Console.ReadLine());//输入首次猜测的数字
+            while ((iGuess != -1) && (iGuess != iNum))
+            {
+                if (iGuess < iNum)//若猜测的数字小于基准数，则提示用户输入的数太小，并让用户重新输入
+                {
+                    Console.Write(" 太小，请重新输入：");
+                    iGuess = Convert.ToInt32(Console.ReadLine());
+                }
+                else//若猜测的数字大于基准数，则提示用户输入的数太大，并让用户重新输入
+                {
+                    Console.Write(" 太大，请重新输入：");
+                    iGuess = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            if (iGuess == -1)//若最后一次输入的数字是-1，循环结束的原因是用户选择退出游戏
+            {
+                Console.WriteLine(" 退出游戏！");
+            }
+            else//若最后一次输入的数字不是-1，用户猜对数字，获得成功，游戏结束
+            {
+                Console.WriteLine(" 恭喜你，你赢了，猜中的数字是：" + iNum);
+            }
+            Console.WriteLine("\n ———————游戏结束———————");
+            Console.ReadLine();
+        }
+    }
+}

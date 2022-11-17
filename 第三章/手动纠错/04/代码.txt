@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Test04
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x = 19810927.0112;//声明double类型变量x
+            int y = x;//此处有错误，应该将x的值通过显式类型转换赋值给y
+            Console.WriteLine("double变量值：" + x);//输出double变量x
+            Console.WriteLine("int变量值：" + y);//输出整型变量y
+            Console.ReadLine();
+        }
+    }
+}

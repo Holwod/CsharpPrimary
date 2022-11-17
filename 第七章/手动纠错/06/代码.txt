@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //创建ArrayList对象
+            ArrayList list = new ArrayList();
+            list.Add(1);//添加int类型值
+            list.Add("小王");//添加字符串值
+            //遍历ArrayList集合，输出其中的每个元素
+            //此处发生错误，因为上面添加了int类型的值，而此处遍历时，使用了字符串变量来进行遍历
+            //第一种修改方法：可以将上面的list.Add(1);修改为list.Add("1");
+            //第二种修改方法：将下面的foreach循环修改为for循环，代码如下：
+            //for (int i = 0; i < list.Count; i++)
+            //    Console.WriteLine(list[i]);
+            foreach (string str in list)
+                Console.WriteLine(str);
+            Console.ReadLine();
+        }
+    }
+}

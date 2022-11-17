@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string bank = Console.ReadLine();//银行简称
+            switch (bank)
+            {
+                //此处发生错误，每个case标签都应该有一个break
+                //所以应该在Console.WriteLine("中国工商银行");代码后面加break;语句
+                case "ICBC":
+                    Console.WriteLine("中国工商银行");
+                case "CBC":
+                    Console.WriteLine("中国建设银行");
+                    break;
+                case "ABC":
+                    Console.WriteLine("中国农业银行");
+                    break;
+                default:
+                    Console.WriteLine("输入银行简称错误！");
+                    break;
+            }
+            Console.ReadLine();
+        }
+    }
+}

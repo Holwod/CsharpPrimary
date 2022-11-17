@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string int= "明日科技";//定义一个字符串变量，此处出现错误，变量的名称“int”与C#关键字冲突，应该将int修改其他的变量名，比如str
+            Console.WriteLine("字符串变量的值：" + int);//此处错误，应该将int修改为上面代码中修改之后的变量名
+            Console.ReadLine();
+        }
+    }
+}

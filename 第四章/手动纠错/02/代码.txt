@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 24;
+            x += x--;//先使用x的值，再对其减1
+            x += x %= 17;
+            Console.WriteLine("变量x的值为："+x);
+
+            int y = 24;
+            y += --y;//先减1，然后再使用y的值
+            y += y %= 17;
+            Console.WriteLine("变量y的值为：" + y);
+
+            Console.ReadLine();
+        }
+    }
+}

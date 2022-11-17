@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Test05
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double db = 2008;//声明一个double类型变量db，并初始化为2008
+            object obj = db;//对db变量执行装箱操作
+            Console.WriteLine("1、db的值为{0}，装箱之后的对象为{1}", db, obj);
+            int i = (int)obj;//拆箱操作，此处有错误,主要是装箱和拆箱之后的数据类型不一致造成的，可以将int类型换成double类型
+            Console.WriteLine("2、obj的值为{0}，拆箱之后的对象为{1}", obj, i);
+            Console.ReadLine();
+
+        }
+    }

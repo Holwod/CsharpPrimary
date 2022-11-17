@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("——————商品列表——————");
+            Console.WriteLine();
+            Console.WriteLine("1、华为Mate 30(64G)  6888\n2、荣耀30(高配版)  3999\n3、一加手机7T  2999.99");
+            while (true)
+            {
+                Console.Write("\n请输入要购买的商品编号：");
+                int id = Convert.ToInt32(Console.ReadLine());
+                if (id == 1)
+                {
+                    Console.WriteLine("您购买的商品为：华为Mate 30(64G)，价格为 {0:C0}", 6888);
+                }
+                else if (id == 2)
+                {
+                    Console.WriteLine("您购买的商品为：荣耀30(高配版)，价格为 {0:C0}", 3999);
+                }
+                else if (id == 3)
+                {
+                    Console.WriteLine("您购买的商品为：一加手机7T，价格为 {0:C2}", 2999.99);
+                }
+            }
+        }
+    }
+}

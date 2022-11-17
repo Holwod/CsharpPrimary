@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        //自定义一个方法，用来输入字符串
+        static void ShowInfo(string str)
+        {
+            Console.WriteLine(str);
+            Console.ReadLine();
+        }
+        static void Main(string[] args)
+        {
+            //定义字符串
+            string str = "明日科技";
+            //输出字符串的第一个字符，此处发生错误，因为ShowInfo方法的参数为string类型，而str[i]获取到的是char类型
+            // 所以应该将str[i]转换为字符串类型，修改为ShowInfo(str[0].ToString());即可
+            ShowInfo(str[0]);
+        }
+    }

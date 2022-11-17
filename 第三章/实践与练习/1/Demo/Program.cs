@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("请输入你的家：");
+            string home = Console.ReadLine();
+            Console.Write("请输入你的单位：");
+            string company = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\n=============设置常用地点=============");
+            Console.WriteLine("我的家：" + home);
+            Console.WriteLine("我的单位：" + company);
+            Console.ReadLine();//定位控制台窗体
+        }
+    }
+}

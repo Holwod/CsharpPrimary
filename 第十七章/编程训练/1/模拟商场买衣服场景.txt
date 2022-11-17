@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    public abstract class Market
+    {
+        public string Name { get; set; }//商场名称
+        public string Goods { get; set; }//商品名称
+        public abstract void Shop();//抽象方法，用来输出信息
+    }
+    public class WallMarket : Market//继承抽象类
+    {
+        public override void Shop()//重写抽象方法
+        {
+            Console.WriteLine(Name + "购买" + Goods);
+        }
+    }
+    public class TaobaoMarket : Market//继承抽象类
+    {
+        public override void Shop()//重写抽象方法
+        {
+            Console.WriteLine(Name + "购买" + Goods);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Market market = new WallMarket();//使用派生类对象创建抽象类对象
+            market.Name = "沃尔玛";
+            market.Goods = "七匹狼西服";
+            market.Shop();
+            market = new TaobaoMarket();//使用派生类对象创建抽象类对象
+            market.Name = "淘宝";
+            market.Goods = "韩都衣舍花裙";
+            market.Shop();
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        int Add(int num1, int num2, int num3)
+        {
+            int result = num1 + num2 + num3;
+            return result;
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            //此处发生错误，因为定义的Add方法中有3个int参数，而这里只传了2个参数
+            //可以将下面代码修改为：int result = program.Add(3, 5,6);，这里的6可以是任何int型数据
+            int result = program.Add(3, 5);
+            Console.WriteLine("计算结果为：" + result);
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\n 题目：有一组数1、1、2、3、5、8、13、21、34…，要求算出这组数的第30个数是多少？");//输出指定位数上的数据
+            int num1 = 1, num2 = 1, temp;//定义3个变量，num1用来记录
+            for (int i = 2; i < 30; i++)
+            {
+                num1 += num2;//后一个数字是前两个数字之和
+                //交换num1和num2的值
+                temp = num1;
+                num1 = num2;
+                num2 = temp;
+            }
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("\n 第 30 个数为：" + num2);//输出指定位数上的数据
+            Console.ReadLine();
+        }
+    }
+}

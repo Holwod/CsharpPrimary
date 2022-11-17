@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("请输入要拨打的电话号码：");
+            string phone = Console.ReadLine();//记录用户的输入
+            if (phone == "4006751066")//判断输入的电话号码是否为4006751066
+            {
+                Console.WriteLine("电话正在接通，请等待……");
+            }
+            else
+            {
+                Console.WriteLine("对不起，您拨打的号码不存在！");
+            }
+            Console.ReadLine();
+        }
+    }
+}

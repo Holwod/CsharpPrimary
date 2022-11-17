@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = "下雨";
+            if (str = "不下雨")//此处发生错误，这里应该是布尔表达式，应该修改为:str == "不下雨"
+            {
+                Console.WriteLine("出去逛街");
+            }
+            Console.ReadLine();
+        }
+    }
+}

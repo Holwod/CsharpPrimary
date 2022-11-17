@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Computer
+    {                                       // 父类：电脑
+        public string Screen = "液晶显示屏";// 属性：屏幕
+        public void Startup()
+        {   // 方法：开机
+            Console.WriteLine("计算机正在开机，请等待...");
+        }
+    }
+    class Pad : Computer
+    {  // 子类：平板电脑
+        public string Battery = "5000毫安电池";// 平板电脑的属性：电池
+
+        static void Main(string[] args)
+        {
+            Computer pc = new Computer();// 创建电脑类对象
+            Console.WriteLine("Computer的屏幕是：" + pc.Screen);
+            pc.Startup();// 电脑类对象调用开机方法
+            Pad ipad = new Pad();// 创建平板电脑类对象
+            Console.WriteLine("Pad的屏幕是：" + ipad.Screen);// 平板电脑类对象使用父类属性
+            Console.WriteLine("Pad的电池是：" + ipad.Battery);// 平板电脑类对象使用自己的属性
+            ipad.Startup();// 平板电脑类对象使用父类方法
+            Console.ReadLine();
+        }
+    }
+}

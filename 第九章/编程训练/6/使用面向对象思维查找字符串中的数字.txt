@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        //查找数字方法
+        static bool getNumeric(string str)
+        {
+            bool b = false;
+            //将所有数字存储到一个字符串数组中
+            string[] ArrayInt = new string[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+            foreach (string n in ArrayInt)//判断字符是否包含数组中指定的数字
+            {
+                if (n == str)//如果找到了数字
+                {
+                    b = true;
+                    break;
+                }
+            }
+            return b;
+        }
+        static void Main(string[] args)
+        {
+            while(true)
+            {
+                Console.WriteLine("请输入任意文本：");
+                string text = Console.ReadLine();
+                Console.WriteLine("查找到的数字为：");
+                for(int i = 0; i < text.Length; i++)//循环遍历这个字符串
+                {
+                    string str = text.Substring(i, 1);//单一读取每一个字符,Substring(int startIndex,int length)
+                    bool b = getNumeric(str);//判断字符是否为数字
+                    if (b)
+                    {
+                        Console.Write(str + "  ");//如果是数字则显示
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b;
+            Console.Write("\n 请输入a的值是：");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a < 50)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                b = 3 * a;
+                Console.WriteLine(" b={0}(a<50时)\n", b);
+            }
+            else if (a >= 50 && a < 500)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                b = 6 * a + 60;
+                Console.WriteLine(" b={0}(a>=50且a<500时)\n", b);
+            }
+            else if (a >= 500)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                b = 9 * a - 90;
+                Console.WriteLine(" b={0}(a>=500时)\n", b);
+            }
+            Console.Read();
+        }
+    }
+}

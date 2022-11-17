@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Test07
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Test test=new Test();//创建类的对象
+            Console.WriteLine("常量的值："+test.PI);//输出常量的值，此处发生错误，常量需要直接使用类名进行调用（与静态成员一样），不能使用使用类的对象调用(改大小写)
+            Console.ReadLine();
+        }
+    }
+    class Test
+    {
+        public const double PI = 3.14;
+    }
+}

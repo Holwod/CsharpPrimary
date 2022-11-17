@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string password = "";
+            Console.Write(" 请输入密码：");
+            password += Console.ReadLine();
+            Console.Write(" 请输入密码：");
+            password += "、" + Console.ReadLine();
+            Console.Write(" 请输入密码：");
+            password += "、" + Console.ReadLine();
+            Console.Write(" 请输入密码：");
+            password += "、" + Console.ReadLine();
+            Console.Write(" 请输入密码：");
+            password += "、" + Console.ReadLine();
+            Console.Write(" 请输入密码：");
+            password += "、" + Console.ReadLine();
+            Console.Write("\n 您六次输入的密码分别是"+password);
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    /// <summary>
+    /// 建立的虚方法，可以在子类中被重写
+    /// </summary>
+    class Operation
+    {
+        public virtual double operation(int x, int y)
+        {
+            return x * y;
+        }
+    }
+    /// <summary>
+    /// 在子类中重写虚方法
+    /// </summary>
+    class Addition : Operation
+    {
+        public override double operation(int x, int y)
+        {
+            return (x + y);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Operation[] operations = { new Operation(), new Addition() };
+            while (true)
+            {
+                Console.Write("请输入第一个数：");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("请输入第二个数：");
+                int num2 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("请输入运算种类（+或者*）：");
+                string str = Console.ReadLine();
+                if (str == "+")
+                    Console.WriteLine("\n{0}+{1}={2}\n", num1,num2, operations[1].operation(num1, num2));
+                else
+                    Console.WriteLine("\n{0}*{1}={2}\n", num1, num2, operations[0].operation(num1, num2));
+            }
+        }
+    }
+}

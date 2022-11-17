@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x, price, discount, money;       //x:加油量，price:价格，discount:折扣，money:应付金额
+            int y;                          //燃用油种类
+            char z;                         //服务等级
+            Console.WriteLine("------欢迎光临------");
+            Console.WriteLine();
+            Console.WriteLine("请选择汽车燃料的种类");
+            Console.WriteLine();
+            Console.WriteLine("	1:90号汽油	2：93号汽油	3：97号 汽油 0: 0号柴油");
+            y = Convert.ToInt32(Console.ReadLine());
+            //对输入的燃用油种类进行判定，输出其价格
+            switch (y)
+            {
+                case 1:
+                    price = 6.8;
+                    Console.WriteLine("您选择的是90号汽油，价格为：" + price + " 元/升");
+                    break;
+                case 2:
+                    price = 6.42;
+                    Console.WriteLine("您选择的是93号汽油，价格为：" + price + " 元/升");
+                    break;
+                case 3:
+                    price = 7.02;
+                    Console.WriteLine("您选择的是97号汽油，价格为：" + price + " 元/升");
+                    break;
+                case 0:
+                    price = 5.75;
+                    Console.WriteLine("您选择的是0号柴油，价格为：" + price + " 元/升");
+                    break;
+                default:
+                    Console.WriteLine("您输入的汽车然用油种类不正确。。。");
+                    return;
+            }
+            //输入燃用油量
+            Console.WriteLine();
+            Console.WriteLine("请输入您要购买油的升数，例如 5.5 代表您想购买5.5升");
+            x = Convert.ToDouble(Console.ReadLine());
+            if (x <= 0)
+            {
+                Console.WriteLine("很抱歉，您输入的购买量有误！");
+                return;                     //主函数返回，程序结束，后面的语句将不再执行
+            }
+            else
+            {
+                Console.WriteLine("您所要购买的燃用油量是：" + x + " 升");
+            }
+            Console.WriteLine();
+            //输入等级服务
+            Console.WriteLine("请选择服务:   A:自助加油 B：协助加油");
+            z = Convert.ToChar(Console.ReadLine());
+            switch (z)
+            {
+                case 'A':
+                    discount = 0.1;
+                    Console.WriteLine("您选择的是“自助加油”，优惠10%");
+                    break;
+                case 'B':
+                    discount = 0.05;
+                    Console.WriteLine("您选择的是“协助加油”，优惠5%");
+                    break;
+                default:
+                    Console.WriteLine("很抱歉，您所选择的等级服务有误！");
+                    return;
+            }
+            Console.WriteLine();
+            money = x * price * (1 - discount);
+            Console.WriteLine("您本次消费金额为：" + money);
+            Console.WriteLine();
+            Console.WriteLine("------期待您的下次光临！------");
+            Console.ReadLine();
+        }
+    }
+}

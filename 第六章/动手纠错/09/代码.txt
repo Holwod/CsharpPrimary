@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        //该方法的定义出现错误，由于返回值为int类型，但是，在代码块中，只判断了num2不为0时才返回数据
+        //而如果为0，没有任何操作，所以会出现错误，应该为该方法添加一个else语句，在else语句中返回一个int型数据
+        //比如，可以添加：else  return -1;
+        static int Div(int num1, int num2)
+        {
+            if (num2 != 0)
+                return num1 / num2;
+
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("请您输入除数：");//输出提示信息
+            int num1 = Convert.ToInt32(Console.ReadLine());//获取输入的数据
+            Console.WriteLine("请您输入被除数：");//输出提示信息
+            int num2 = Convert.ToInt32(Console.ReadLine());//获取输入的数据
+            Console.WriteLine("商为：" + Div(num1, num2));//调用Div方法并将结果显示出来
+            Console.ReadLine();
+        }
+    }
+}

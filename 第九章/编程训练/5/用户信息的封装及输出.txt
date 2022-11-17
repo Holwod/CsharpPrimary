@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class User
+    {
+        public string name;
+        public int age;
+        public char sex;
+        public User(string name, int age, char sex)
+        {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+        public void ShowInfo()
+        {
+            Console.WriteLine("{0}\t{1}\t{2}", name, age, sex);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("姓名\t年龄\t性别");
+            User user1 = new User("小王", 25, '男');
+            user1.ShowInfo();
+            User user2 = new User("小刘", 25, '女');
+            user2.ShowInfo();
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class MyClass
+    {
+        private string id = "";
+        private string name = "";
+        //此处发生了错误，主要是由于这里定义为了private私有，
+        //所以下面访问是出现问题，可以修改为public string ID
+        private string ID
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MyClass myclass = new MyClass();
+            myclass.ID = "BH001";
+            myclass.Name = "TM1";
+            Console.WriteLine(myclass.ID + " " + myclass.Name);
+            myclass.ID = "BH002";
+            myclass.Name = "TM2";
+            Console.WriteLine(myclass.ID + " " + myclass.Name);
+        }
+    }
+}

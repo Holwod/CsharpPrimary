@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        
+        int Add(int num1, int num2)
+        {
+            int result = num1 + num2;
+            return result;
+        }
+        static void Main(string[] args)
+        {
+            //此处出现错误，主要是由于Add方法为非静态方法，所以引用时需要使用对象引用
+            //而不能直接用类名引用,可以将引用Add方法的代码修改如下：
+            //Program program = new Program();
+            //int result = program.Add(3, 5);
+            int result = Program.Add(3, 5);
+            Console.WriteLine("计算结果为：" + result);
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //定义一个2行3列的二维数组
+            //此处发生错误，使用int[][]定义二维数组时，不能指定列数
+            //可以修改为int[,] arr=new int[2,3];或者int[][] arr=new int[2][];
+            int[][] arr=new int[2][3];
+            arr[0][0]=0;
+            arr[0][1]=1;
+            arr[0][2]=2;
+            arr[1][0]=3;
+            arr[1][1]=4;
+            arr[1][2]=5;
+        }
+    }
+}

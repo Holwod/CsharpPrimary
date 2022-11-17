@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //定义一个一维数组并初始化
+            int[] array = new int[5] { 0, 1, 2, 3, 4 };
+            //遍历输出数组元素，此处发生错误，因为数组的索引从0开始，当i = array.Length时，实际上超出了数组的范围
+            //所以，应该将判断条件i <= array.Length修改为i < array.Length
+            for (int i = 0; i <= array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Test test=null;//声明test对象
+            test.ShowInfo();//此处发生错误，因为test对象没有被初始化，可以将上面一行Test test=null;修改为Test test = new Test();
+        }
+    }
+    class Test
+    {
+        public void ShowInfo()
+        {
+            Console.WriteLine("C#经典课程");
+            Console.ReadLine();
+        }
+    }
+}

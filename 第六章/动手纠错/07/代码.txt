@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1, sum = 0;
+            //此处出现问题，i++递增条件并没有包含在for循环中，所以导致了for死循环，而无法执行最后的输出语句
+            //应该将代码修改为：
+            //for (; i <= 100; )
+            //{
+            //    sum += i;
+            //    i++;
+            //}
+            for (; i <= 100; )
+                sum += i;
+            i++;
+            Console.WriteLine(sum);
+            Console.ReadLine();
+        }
+    }
+}

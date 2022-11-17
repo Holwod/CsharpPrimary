@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //此处发生错误，初始化的数组元素与指定的数组长度不一致
+            //可以修改为：int[] array = new int[3] { 0, 1, 2 };或者int[] array = new int[5] { 0, 1, 2, 3, 4 };
+            int[] array = new int[5] { 0, 1, 2 };
+            //遍历输出数组元素
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+            Console.ReadLine();
+        }
+    }
+}

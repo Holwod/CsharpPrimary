@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write(" 请输入在线支付次数：");
+            int tip1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" 请输入到店支付次数：");
+            int tip2 = Convert.ToInt32(Console.ReadLine());
+            int jsl = (tip1 + tip2) * 180;
+            Console.WriteLine(" 今天蚂蚁庄园一共产生 {0} g鸡饲料", jsl);
+            Console.ReadLine();
+        }
+    }
+}

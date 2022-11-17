@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double I1 = 55.5;//声明整型变量I1，并赋值为55
+            double I2 = 10.8;//声明整型变量I1，并赋值为10
+            int I3;//声明整型变量I3
+            //此处发生错误，由于%运算符两边都是double变量，所以结果也是double类型，要将double值赋值给int类型，需要进行显式类型转换，
+            //可以修改为：I3 = Convert.ToInt32(I1 % I2);
+            I3 = I1 % I2;
+            Console.WriteLine(I3.ToString());
+            Console.Read();
+        }
+    }
+}

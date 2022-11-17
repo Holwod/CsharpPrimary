@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("    欢迎进入明日科技官网\n\n    请首先输入用户名：");
+            string Name = Console.ReadLine();//记录登录用户名
+            Console.WriteLine("    登录用户：" + Name);//输出登录用户名
+            Console.WriteLine("    登录时间：" + DateTime.Now);//记录登录时间
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,1 @@
+update tb_test set 商品类型='数码家电' where 商品类型='家电'

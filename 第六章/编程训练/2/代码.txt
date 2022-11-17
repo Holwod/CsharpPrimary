@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\n 输入1：代表选择红玫瑰");
+            Console.WriteLine(" 输入2：代表选择白玫瑰");
+            Console.WriteLine(" 输入3：代表选择粉玫瑰");
+            Console.WriteLine(" 输入4：代表选择蓝玫瑰\n");
+            Console.Write(" 请输入您的选择：");
+            int rose = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            if (rose == 1)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(" ----------------------------------------------------");
+                Console.WriteLine(" |        您选择的是红玫瑰                           |");
+                Console.WriteLine(" |   它代表我爱你、热恋，希望与你泛起激情的爱        |");
+                Console.WriteLine(" ----------------------------------------------------");
+            }
+            else if (rose == 2)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine(" ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★");
+                Console.WriteLine(" ★           您选择的是白玫瑰                      ★");
+                Console.WriteLine(" ★  它代表纯洁、谦卑。尊敬，我们的爱情是纯洁的爱   ★");
+                Console.WriteLine(" ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ");
+            }
+            else if (rose == 3)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine(" ▽ ▽ ▽ ▽ ▽ ▽ ▽ ▽ ▽ ▽ ▽ ▽ ▽ ▽ ▽ ▽");
+                Console.WriteLine("            您选择的是粉玫瑰                  ");
+                Console.WriteLine("   它代表初恋，喜欢你那灿烂的笑容，年轻漂亮  ");
+                Console.WriteLine(" △ △ △ △ △ △ △ △ △ △ △ △ △ △ △ △ ");
+            }
+            else if (rose == 4)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.WriteLine(" ≈ ≈ ≈ ≈ ≈ ≈ ≈");
+                Console.WriteLine("  您选择的是蓝玫瑰");
+                Console.WriteLine("  它代表憨厚、善良");
+                Console.WriteLine(" ≈ ≈ ≈ ≈ ≈ ≈ ≈");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine(" & & & & & & & & & & & & & & &");
+                Console.WriteLine(" & 对不起，没有您选择玫瑰花  &");
+                Console.WriteLine(" & & & & & & & & & & & & & & &");
+            }
+            Console.ReadLine();
+        }
+    }
+}

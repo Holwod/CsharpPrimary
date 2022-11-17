@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class UI//定义用户界面类
+    {
+        static UI()//定义静态构造函数
+        {
+            DateTime week = DateTime.Now;//记录当前时间
+            //判断是否是周六、周日
+            if (week.DayOfWeek == DayOfWeek.Saturday || week.DayOfWeek == DayOfWeek.Sunday)
+            {
+                Console.BackgroundColor = ConsoleColor.Green;//设置颜色为绿色
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Red;//设置颜色为红色
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            UI ui = new UI();//使用默认构造函数创建UI类的对象
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(@"Windows的系统目录为：C:\Windows");     //输出Windows的系统目录
+            Console.ReadLine();
+        }
+    }
+}

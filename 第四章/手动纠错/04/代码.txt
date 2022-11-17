@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("请输入一个分数：");
+            int i = Convert.ToInt32(Console.ReadLine());//记录用户输入
+            //此处发生错误，混淆了“=”和“==”运算符，将“=”修改为“==”即可
+            if (i = 90)
+            {
+                Console.WriteLine("你太优秀了！");
+            }
+        }
+    }
+}

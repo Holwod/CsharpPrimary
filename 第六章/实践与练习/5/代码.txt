@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] names = new string[10];
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("    新生入学报到系统");
+                Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^");
+                Console.Write("请输入学生姓名：");
+                string name = Console.ReadLine();
+                names[i] = name;
+                for (int j = 0; j < i + 1; j++)
+                    Console.WriteLine((j + 1) + "  " + names[j]);
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+    }
+}

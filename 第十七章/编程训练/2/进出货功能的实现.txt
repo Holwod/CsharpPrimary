@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    public abstract class Information               //定义抽象类
+    {
+        public string Code { get; set; }            //编号属性及实现
+        public string Name { get; set; }            //名称属性及实现
+        public abstract void ShowInfo();            //抽象方法，用来输出信息
+    }
+    public class JHInfo : Information               //继承抽象类，定义进货类
+    {
+        public override void ShowInfo()             //重写抽象方法，输出进货信息
+        {
+            Console.WriteLine("进货信息：\n" + Code + " " + Name);
+        }
+    }
+    public class XSInfo : Information               //继承抽象类，定义销售类
+    {
+        public override void ShowInfo()             //重写抽象方法，输出销售信息
+        {
+            Console.WriteLine("销售信息：\n" + Code + " " + Name);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Information info = new JHInfo();            //使用派生类对象创建抽象类对象
+            info.Code = "JH0001";
+            info.Name = "笔记本电脑";
+            info.ShowInfo();                        //调用进货派生类中重写的方法
+            info = new XSInfo();                    //使用派生类对象创建抽象类对象
+            info.Code = "XS0001";
+            info.Name = "华为荣耀9";
+            info.ShowInfo();                        //调用销售派生类中重写的方法
+            Console.ReadLine();
+        }
+    }
+}

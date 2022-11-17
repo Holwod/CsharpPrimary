@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //此处发生错误，前面定义的数组类型是int，但在后面初始化时用了string，导致定义数组时的前后类型不一致
+            //将修改为int[] array = new int[5] { 0, 1, 2, 3, 4 };即可
+            int[] array = new string[5] { 0, 1, 2, 3, 4 };
+            //遍历输出数组元素
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+            Console.ReadLine();
+        }
+    }
+}

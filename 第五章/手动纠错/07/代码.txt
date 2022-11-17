@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str1 = "*^__^*";
+            //下面两行代码发生错误，因为使用PadLeft方法和PadRight方法对字符串进行填充时，只能进行单个字符的填充，
+            //所以下面两行代码应该修改为：string str2 = str1.PadLeft(7, '(');string str3 = str2.PadRight(8, ')');
+            string str2 = str1.PadLeft(7, "(");//左填充
+            string str3 = str2.PadRight(8, ")");//右填充
+            Console.Write(str3);
+            Console.ReadLine();
+        }
+    }
+}

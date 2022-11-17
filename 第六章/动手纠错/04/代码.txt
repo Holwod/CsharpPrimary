@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1;
+            //此处发生错误，由于i的初始值为1，所以i<=2一直为true，因此会导致该程序为死循环
+            //可以在while循环语句中对i执行递增操作，比如：i++;
+            while (i <= 2)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
+        }
+    }
+}

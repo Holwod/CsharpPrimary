@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float f1 = 3.592f;
+            float f2 = 3.408f;
+            string ad = "http://u.10010.cn/tAE3v";
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("中国联通流量提醒：");
+            Console.WriteLine("截至10月21日24时，");
+            Console.WriteLine("您当月共享国内通用流量已用" + f1 + "GB，剩余" + f2 + "GB；");
+            Console.WriteLine("其他流量使用情况请点击进入" + ad + "查询详解。\n");
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        int Add(int num1, int num2)
+        {
+            int result = num1 + num2;
+            return result;
+        }
+        //Add方法的重载出现了问题，在C#中定义重载方法时，一定不能仅仅是方法的返回类型不同
+        //所以，可以将下面的Add重载形式中的参数中的一个或者两个修改为double类型，例如:
+        //double Add(double num1, int num2)
+        //{
+        //    double result = num1 + num2;
+        //    return result;
+        //}
+        double Add(int num1, int num2)
+        {
+            double result = num1 + num2;
+            return result;
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            int result = program.Add(3, 5);
+            Console.WriteLine("计算结果为：" + result);
+            Console.ReadLine();
+        }
+    }
+}

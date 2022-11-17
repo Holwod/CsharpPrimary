@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test04
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = "C#编程词典";//定义一个字符串变量，并赋值
+            int price;//定义一个int变量
+            //输出定义的字符串变量和int变量，此处发生错误，由于price没有赋值，所以不能输出，应该在上面定义price变量时，为其赋一个int整数值
+            Console.WriteLine(str + "的价格是" + price);
+            Console.ReadLine();
+        }
+    }

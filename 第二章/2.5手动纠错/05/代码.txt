@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test05
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Test test = new Test();//创建Test类的对象
+            //输出Test类中变量i的值，此处发生错误，因为i为private私有类型，所以此处无法调用
+            //可以将声明变量i时的private修饰符修改为public修饰符，应该使该变量能够在其他类中访问
+            Console.WriteLine("Test类中i变量的值为：" + test.i);
+            Console.ReadLine();
+        }
+    }
+    class Test
+    {
+        private int i = 368;
+    }
+}

@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("请输入你的身份证号:");
+            string result = Console.ReadLine();
+            if (result.Length == 18)
+            {
+                Console.WriteLine("你的生日是:" + result.Substring(6, 4) + "年" + result.Substring(10, 2) + "月" + result.Substring(12, 2) + "日");
+                string gender = Convert.ToInt32(result.Substring(16, 1)) % 2 == 0 ? "女" : "男";
+                Console.WriteLine("你的性别是:" + gender);
+            }
+            Console.ReadLine();
+        }
+    }
+}

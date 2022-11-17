@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write(" 请输入能量值：");
+            int a = Convert.ToInt32(Console.ReadLine());
+            double b = Convert.ToDouble(a / 100);
+            Console.WriteLine(" 我的能量为："+ a);
+            Console.WriteLine(" {0} 能量值可以兑换 {1:F2} 元",a,b);
+            Console.ReadLine();
+        }
+    }
+}

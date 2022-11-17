@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string strName = "mingrikeji";
+            //此处发生错误，两个参数的和不能大于10，并且第一个参数不能大于9，比如，可以修改为：string strSName = strName.Substring(6, 3);
+            string strSName = strName.Substring(7, 4);
+            Console.WriteLine("简称为：" + strSName);
+            Console.ReadLine();
+        }
+    }
+}

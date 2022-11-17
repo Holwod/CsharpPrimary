@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 10, b = 5;
+            //此处发生错误，三目运算符不能单独构成语句，这里显然错误引用了三目运算符，修改为int n = (a > b) ? a : b;即可
+            (a > b) ? a : b;
+            Console.WriteLine(n);
+            Console.ReadLine();
+        }
+    }
+}

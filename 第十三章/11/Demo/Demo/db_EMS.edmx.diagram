@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b11ce7a70a0a490c8d07250c2f3324bb" Name="Diagram1">
+        <EntityTypeShape EntityType="db_EMSModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_employee" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_PDic" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_stock" Width="1.5" PointX="8.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_units" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_currentaccount" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_power" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_resell_detailed" Width="1.5" PointX="11" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_resell_main" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_rewarehouse_detailed" Width="1.5" PointX="11" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_rewarehouse_main" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_sell_detailed" Width="1.5" PointX="11" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_sell_main" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_unit" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_warehouse_detailed" Width="1.5" PointX="11" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_EMSModel.tb_warehouse_main" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_resell_main_tb_employee" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_rewarehouse_main_tb_employee" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_sell_main_tb_employee" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_warehouse_main_tb_employee" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_resell_detailed_tb_stock" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_rewarehouse_detailed_tb_stock" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_sell_detailed_tb_stock" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_warehouse_detailed_tb_stock1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_currentaccount_tb_units" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_resell_main_tb_units" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_rewarehouse_main_tb_units" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_sell_main_tb_units" ManuallyRouted="false" />
+        <AssociationConnector Association="db_EMSModel.FK_tb_warehouse_main_tb_units" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    public class StockInfo//自定义库存商品类
+    {
+        public string FullName//自动实现属性
+        {
+            get;
+            set;
+        }
+        public void ShowGoods()//定义一个无返回值类型的方法
+        {
+            Console.WriteLine("库存商品名称：{0}",FullName);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StockInfo stockInfo = new StockInfo();//创建StockInfo对象
+            stockInfo.FullName = "笔记本电脑";//使用对象调用类成员属性
+            stockInfo.ShowGoods();//使用对象调用类成员方法
+            Console.ReadLine();
+        }
+    }
+}

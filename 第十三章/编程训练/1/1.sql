@@ -1,0 +1,1 @@
+select * from tb_test where 商品类型='家电'

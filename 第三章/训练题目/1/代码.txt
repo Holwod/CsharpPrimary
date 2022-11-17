@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int day = 618;
+            Console.WriteLine("京东年终大促开始了！");
+            Console.WriteLine("京东 "+day+" 正式开启……");
+            Console.ReadLine();
+        }
+    }
+}

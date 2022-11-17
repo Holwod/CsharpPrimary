@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        //方法的返回值为int类型，但是在方法体中并没有返回任何类型的数据
+        //可以在定义的result下一行添加：return result;
+        int Add(int num1, int num2,int num3)
+        {
+            int result = num1 + num2 + num3;
+        }
+        static void Main(string[] args)
+        {
+            
+        }
+    }
+}
